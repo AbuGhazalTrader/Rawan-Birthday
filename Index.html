@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Rewan ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Arial", sans-serif;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at top, #ff8fb3, transparent 35%),
+        linear-gradient(135deg, #16001f, #42002e, #16001f);
+      color: white;
+    }
+
+    /* LOGIN */
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      width: min(400px, 100%);
+      padding: 38px 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.10);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 25px 80px rgba(0,0,0,.4);
+      text-align: center;
+      animation: appear 1s ease;
+    }
+
+    .cake {
+      font-size: 65px;
+      margin-bottom: 12px;
+      animation: bounce 2s infinite;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #ffd6e5;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px 18px;
+      margin-bottom: 14px;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      background: rgba(255,255,255,.93);
+      font-size: 16px;
+      text-align: center;
+      color: #333;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #ff4f91, #ff176c);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(255,23,108,.35);
+      transition: .25s;
+    }
+
+    button:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .error {
+      color: #ffb4c9;
+      margin-top: 14px;
+      display: none;
+    }
+
+    /* BIRTHDAY */
+    .birthday-page {
+      display: none;
+      min-height: 100vh;
+      padding: 35px 18px 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .birthday-title {
+      font-size: clamp(42px, 10vw, 85px);
+      font-weight: 900;
+      background: linear-gradient(90deg, #fff, #ff9ec5, #fff);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: glow 2s infinite alternate;
+      margin-top: 15px;
+    }
+
+    .name {
+      font-size: clamp(30px, 7vw, 55px);
+      margin-top: 5px;
+      color: #ffd0e1;
+    }
+
+    .photo {
+      width: min(340px, 85vw);
+      height: min(450px, 110vw);
+      object-fit: cover;
+      border-radius: 30px;
+      margin: 28px auto;
+      display: block;
+      border: 5px solid rgba(255,255,255,.8);
+      box-shadow:
+        0 0 25px #ff4f91,
+        0 25px 70px rgba(0,0,0,.5);
+      animation: photoIn 1.5s ease;
+    }
+
+    .message {
+      max-width: 700px;
+      margin: 10px auto;
+      padding: 28px;
+      border-radius: 25px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(12px);
+      line-height: 2;
+      font-size: 19px;
+      color: #fff0f5;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -50px;
+      font-size: 25px;
+      animation: floatUp linear forwards;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .confetti {
+      position: fixed;
+      top: -20px;
+      width: 9px;
+      height: 14px;
+      animation: confettiFall linear forwards;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(30px) scale(.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff4f91; }
+      to { text-shadow: 0 0 35px #ff9ec5; }
+    }
+
+    @keyframes photoIn {
+      from {
+        opacity: 0;
+        transform: scale(.7) rotate(-4deg);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+      }
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes confettiFall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGIN PAGE -->
+  <section class="login-page" id="loginPage">
+    <div class="login-box">
+
+      <div class="cake">🎂</div>
+
+      <h1>في حاجة حلوة مستنياك ❤️</h1>
+
+      <p class="subtitle">
+        ادخل الـ ID والـ Password<br>
+        عشان تفتح المفاجأة 🎁
+      </p>
+
+      <input
+        id="username"
+        type="text"
+        placeholder="ID"
+        autocomplete="off"
+      >
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+      >
+
+      <button onclick="login()">
+        افتح المفاجأة ❤️
+      </button>
+
+      <p class="error" id="error">
+        الـ ID أو الـ Password غلط 😏
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- BIRTHDAY PAGE -->
+  <section class="birthday-page" id="birthdayPage">
+
+    <div>🎈 🎉 🎂 🎉 🎈</div>
+
+    <h1 class="birthday-title">
+      Happy Birthday
+    </h1>
+
+    <h2 class="name">
+      ريوان أحمد ❤️
+    </h2>
+
+    <img
+      src="rewan.jpg"
+      alt="Rewan"
+      class="photo"
+    >
+
+    <div class="message">
+      <p>
+        كل سنة وإنت طيب يا ريوان ❤️🎂
+      </p>
+
+      <p>
+        النهارده مش يوم عادي، ده اليوم اللي الدنيا
+        كسبت فيه شخص مميز زيك ✨
+      </p>
+
+      <p>
+        أتمنى السنة الجديدة من عمرك تكون مليانة
+        فرحة ونجاح وضحك وذكريات حلوة،
+        وتحقق فيها كل حاجة نفسك فيها ❤️
+      </p>
+
+      <p>
+        وخليك دايمًا فاكر إنك تستاهل كل حاجة
+        حلوة في الدنيا.
+      </p>
+
+      <p>
+        Happy Birthday, Rewan! 🥳❤️
+      </p>
+    </div>
+
+  </section>
+
+
+  <script>
+
+    function login() {
+
+      const username =
+        document.getElementById("username").value.trim();
+
+      const password =
+        document.getElementById("password").value;
+
+      const error =
+        document.getElementById("error");
+
+      if (
+        username === "rewanahmed" &&
+        password === "28/8/2026"
+      ) {
+
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("birthdayPage").style.display = "block";
+
+        startCelebration();
+
+      } else {
+
+        error.style.display = "block";
+
+      }
+    }
+
+
+    function startCelebration() {
+
+      // Confetti
+      for (let i = 0; i < 100; i++) {
+
+        setTimeout(() => {
+
+          const c = document.createElement("div");
+
+          c.className = "confetti";
+
+          c.style.left = Math.random() * 100 + "vw";
+          c.style.background =
+            randomColor();
+
+          c.style.animationDuration =
+            (Math.random() * 3 + 2) + "s";
+
+          document.body.appendChild(c);
+
+          setTimeout(() => c.remove(), 6000);
+
+        }, i * 35);
+
+      }
+
+      // Hearts
+      setInterval(() => {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML =
+          ["❤️","💖","💕","💗","💘"][Math.floor(Math.random() * 5)];
+
+        heart.style.left =
+          Math.random() * 100 + "vw";
+
+        heart.style.animationDuration =
+          (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 9000);
+
+      }, 500);
+
+    }
+
+
+    function randomColor() {
+
+      const colors = [
+        "#ff4f91",
+        "#ffd166",
+        "#06d6a0",
+        "#4cc9f0",
+        "#ffffff",
+        "#ff006e"
+      ];
+
+      return colors[
+        Math.floor(Math.random() * colors.length)
+      ];
+
+    }
+
+  </script>
+
+</body>
+</html>
